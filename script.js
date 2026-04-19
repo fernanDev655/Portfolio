@@ -64,34 +64,6 @@
             });
         });
 
-        // Theme Toggle (Dark/Light mode)
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        
-        // Check system preference
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            html.classList.remove('dark');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            if (!html.classList.contains('dark')) {
-                document.body.classList.remove('bg-dark', 'text-white');
-                document.body.classList.add('bg-gray-50', 'text-gray-900');
-                document.querySelectorAll('.glass').forEach(el => {
-                    el.classList.remove('glass');
-                    el.classList.add('glass-light');
-                });
-            } else {
-                document.body.classList.add('bg-dark', 'text-white');
-                document.body.classList.remove('bg-gray-50', 'text-gray-900');
-                document.querySelectorAll('.glass-light').forEach(el => {
-                    el.classList.remove('glass-light');
-                    el.classList.add('glass');
-                });
-            }
-        });
-
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
