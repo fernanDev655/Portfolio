@@ -45,7 +45,15 @@
     opacity: 1;
     transform: translateY(0);
 }
-/* Custom cursor */
+
+/* ========== CUSTOM CURSOR ========== */
+/* Ocultar cursor por defecto en toda la página y elementos interactivos */
+body,
+a, button, input, textarea, select, label,
+[role="button"], .cursor-pointer {
+    cursor: none !important;
+}
+
 .cursor-dot,
 .cursor-outline {
     position: fixed;
@@ -73,6 +81,7 @@
     background-color: rgba(99, 102, 241, 0.1);
     border-color: #6366f1;
 }
+
 /* Form success/error messages */
 .form-message {
     display: none;
